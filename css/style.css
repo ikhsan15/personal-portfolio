@@ -6,7 +6,6 @@
 /* global setting -- start */
   /* define custom css variables */
   :root{
-    --skin-color: #fb839e;
     /* --skin-color-1: #fb839e;
     --skin-color-2: #ec9412;
     --skin-color-3: #1fc586;
@@ -113,10 +112,46 @@
   }
 /* preloader -- end */
 
+/* home section -- start */
+  .home-section{
+    position: relative;
+  }
+  .home-section .left-background,
+  .home-section .right-background{
+    padding: 0 15px;
+    text-align: center;
+  }
+  .home-section .left-background{
+    background-color: grey;
+    padding: 80px 0 80px;
+    min-height: 100vh;
+    flex: 0 0 65%;
+    max-width: 65%;
+  }
+  .home-section .right-background{
+    background-color: violet;
+    padding: 80px 0 80px;
+    min-height: 100vh;
+    flex: 0 0 35%;
+    max-width: 35%;
+  }
+  .home-section .home-container{
+    width: 80%;
+    height: 330px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+    display: flex;
+    margin: -10% auto 20px auto;
+    position: relative;
+  }
+/* home section -- end */
+
 /* footer -- start */
   .footer{
     background-color: #24262b;
     padding: 70px 0;
+    margin-top: 10%;
   }
   .footer-col{
     width: 25%;
