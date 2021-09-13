@@ -19,7 +19,7 @@
 }
 
 body {
-  background-color: var(--bg);
+  background: var(--bg);
 }
 
 a {
@@ -80,3 +80,144 @@ header li:last-child a span {
 }
 
 /* header section -- end */
+
+/* hero -- start */
+.hero {
+  min-height: 90vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.hero h1 {
+  color: var(--main);
+  font-weight: 800;
+  font-size: 4.3rem;
+  line-height: 5.5rem;
+  margin-bottom: 2rem;
+}
+
+.hero a {
+  display: inline;
+  border: 3px solid var(--main);
+  padding: .45rem 1rem;
+  font-size: .85rem;
+  text-transform: uppercase;
+}
+
+.hero a span {
+  font-size: 1.1rem;
+}
+
+img {
+  position: absolute;
+  bottom: 0rem;
+  right: 0;
+}
+
+/* hero -- end */
+
+/* page divide -- start */
+.page-divide {
+  height: 80px;
+  display: grid;
+  place-items: center;
+  position: relative;
+  margin: 1rem 0rem;
+}
+
+.divide {
+  width: 5px;
+  height: 80px;
+  background: var(--main);
+}
+
+.divide-line {
+  position: absolute;
+  width: 50%;
+  border-bottom: 1px dashed #ccc;
+}
+
+.divide-line.left {
+  left: 0;
+}
+
+.divide-line.right {
+  right: 0;
+}
+
+section {
+  padding: 1rem 0rem;
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.section-title h1 {
+  color: var(--font);
+  letter-spacing: 2px;
+  line-height: 3rem;
+  font-size: 2.3rem;
+  font-weight: 600;
+}
+
+.section-title small {
+  font-size: .8rem;
+  color: #888;
+}
+
+.vid-wrapper {
+  width: 100%;
+  max-width: 700px;
+  margin: auto;
+  height: 58vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.vid-wrapper div {
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: grid;
+  place-items: center;
+}
+
+.vid-wrapper div span {
+  font-size: 10rem;
+  color: var(--main);
+}
+
+.skills-wrapper {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.percircle {
+  background: var(--bg-accent) !important;
+}
+
+.percircle span:first-child {
+  font-weight: 700 !important;
+}
+
+.percircle:after {
+  background: var(--bg) !important;
+}
+
+.skill p {
+  color: var(--font);
+  clear: both;
+  padding-left: 1.3rem;
+  padding-top: .5rem;
+}
+
+/* page divide -- end */
