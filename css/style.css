@@ -1,237 +1,82 @@
-/* fonts -- start */
-  /* @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap'); */
-  @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
-/* fonts -- end */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap'
+);
 
 /* global setting -- start */
-  /* define custom css variables */
-  :root{
-    /* --skin-color-1: #fb839e;
-    --skin-color-2: #ec9412;
-    --skin-color-3: #1fc586;
-    --skin-color-4: #2eb1ed;
-    --skin-color-5: #cc3a3b; */
+:root {
+  --main: #88ff08;
+  --bg: #030302;
+  --bg-accent: #191919;
+  --font: #efefef;
+}
 
-    --bg-black-900: #000000;
-    --bg-black-100: #dddddd;
-    --bg-black-50: #eff0f4;
-    --bg-opacity: rgba(255, 255, 255, 0.5);
-    --text-black-900: #000000;
-    --text-black-700: #555555;
-    --text-black-600: #666666;
-    --text-black-300: #bbbbbb;
+* {
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
 
-  }
-  body{
-    font-size: 16px;
-    line-height: 1.5;
-    overflow-x: hidden;
-    background-color: var(--bg-black-50);
-  }
-  body.hidden-scrolling{
-    overflow-y: hidden;
-  }
-  *:not(i){
-    font-family: 'Raleway', sans-serif;
-    font-weight: 400;
-  }
-  *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    outline: none;
-  }
-  :before, :after{
-    box-sizing: border-box;
-  }
-  a{
-    text-decoration: none;
-  }
-  ul{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  img{
-    vertical-align: middle;
-    max-width: 100%;
-  }
-  .container{
-    max-width: 1140px;
-    margin: auto;
-  }
-  .row{
-    display: flex;
-    flex-wrap: wrap;
-  }
-/* global setting -- end*/
+body {
+  background-color: var(--bg);
+}
 
-/* preloader -- start */
-  .preloader{
-    position: fixed;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    z-index: 1500;
-    background-color: var(--bg-black-50);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .preloader.fade-out{
-    opacity: 0;
-    transition: all 0.6s ease;
-  }
-  .preloader .box{
-    width: 65px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  .preloader .box div{
-    height: 15px;
-    width: 15px;
-    background-color: var(--skin-color);
-    border-radius: 50%;
-    animation: loaderAni 1s ease infinite;
-  }
-  .preloader .box div:nth-child(2){
-    animation-delay: 0.1s;
-  }
-  .preloader .box div:nth-child(3){
-    animation-delay: 0.2s;
-  }
-  @keyframes loaderAni{
-    0%, 100%{
-      transform: translateY(0);
-    }
-    50%{
-      transform: translateY(-30px);
-    }
-  }
-/* preloader -- end */
+a {
+  color: var(--font);
+}
 
-/* home section -- start */
-  .home-section{
-    position: relative;
-  }
-  .home-section .left-background,
-  .home-section .right-background{
-    padding: 0 15px;
-    text-align: center;
-  }
-  .home-section .left-background{
-    background-color: grey;
-    padding: 80px 0 80px;
-    min-height: 100vh;
-    flex: 0 0 65%;
-    max-width: 65%;
-  }
-  .home-section .right-background{
-    background-color: violet;
-    padding: 80px 0 80px;
-    min-height: 100vh;
-    flex: 0 0 35%;
-    max-width: 35%;
-  }
-  .home-section .home-container{
-    width: 80%;
-    height: 330px;
-    background-color: #ffffff;
-    border-radius: 20px;
-    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
-    display: flex;
-    margin: -10% auto 20px auto;
-    position: relative;
-  }
-/* home section -- end */
+.wrapper {
+  width: 75%;
+  margin: auto;
+}
 
-/* footer -- start */
-  .footer{
-    background-color: #24262b;
-    padding: 70px 0;
-    margin-top: 10%;
-  }
-  .footer-col{
-    width: 25%;
-    padding: 0 15px;
-  }
-  .footer-col h4{
-    font-size: 18px;
-    color: #ffffff;
-    text-transform: capitalize;
-    margin-bottom: 35px;
-    font-weight: 500;
-    position: relative;
-  }
-  .footer-col h4::before{
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -10px;
-    background-color: var(--skin-color);
-    height: 2px;
-    box-sizing: border-box;
-    width: 50px;
-  }
-  .footer-col ul li:not(:last-child){
-    margin-bottom: 10px;
-  }
-  .footer-col ul li a{
-    font-size: 16px;
-    text-transform: capitalize;
-    /* color: #ffffff; */
-    text-decoration: none;
-    font-weight: 300;
-    color: #bbbbbb;
-    display: block;
-    transition: all 0.3s ease;
-  }
-  .footer-col ul li a:hover{
-    color: var(--skin-color);
-    padding-left: 8px;
-  }
-  .footer-col .social-links a{
-    display: inline-block;
-    height: 40px;
-    width: 40px;
-    margin: 0 10px 10px 0;
-    /* margin: 3px; */
-    text-align: center;
-    border-radius: 50%;
-    color: #ffffff;
-    transition: all 0.5s ease;
-    position: relative;
-    text-decoration: none;
-    overflow: hidden;
-  }
-  .footer-col .social-links a span{
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    color: #ffffff;
-    /* color: var(--skin-color); */
-    background-color: rgba(255, 255, 255, 0.2);
-    line-height: 40px;
-    font-size: 20px;
-    -webkit-transition: transform .5s ease;
-    transition: transform .5s ease;
-  }
-  .footer-col .social-links a span:last-child{
-    -webkit-transform: translateY(100%);
-    transform: translateY(100%);
-    background-color: var(--skin-color);
-    /* background-color: rgba(0, 0, 0, 0.2); */
-  }
-  .footer-col .social-links a:hover span:first-child{
-    -webkit-transform: translateY(-100%);
-    transform: translateY(-100%);
-  }
-  .footer-col .social-links a:hover span:last-child{
-    -webkit-transform: translateY(0%);
-    transform: translateY(0%);
-  }
-/* footer -- end */
+/* global setting -- end */
+
+/* header section -- start */
+header {
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
+  align-items: center;
+}
+
+header h3 {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+header h3 small {
+  color: var(--main);
+  font-size: .8rem;
+}
+
+header ul {
+  display: flex;
+  align-items: center;
+}
+
+header li {
+  margin-left: 1.5rem;
+}
+
+header li:first-child {
+  margin-left: 0rem;
+}
+
+header li a {
+  font-size: .85rem;
+}
+
+header li:last-child a {
+  border: 3px solid var(--main);
+  color: var(--main);
+  text-transform: uppercase;
+  padding: .25rem 1rem;
+}
+
+header li:last-child a span {
+  margin-right: .4rem;
+}
+
+/* header section -- end */
