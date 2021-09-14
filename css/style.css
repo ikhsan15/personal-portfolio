@@ -112,7 +112,7 @@ header li:last-child a span {
 img {
   position: absolute;
   bottom: 0rem;
-  right: 0;
+  right: -4rem;
 }
 
 /* hero -- end */
@@ -145,6 +145,8 @@ img {
 .divide-line.right {
   right: 0;
 }
+
+/* page divide -- end */
 
 section {
   padding: 1rem 0rem;
@@ -191,6 +193,7 @@ section {
   color: var(--main);
 }
 
+/* skills-wrapper -- start */
 .skills-wrapper {
   width: 100%;
   max-width: 800px;
@@ -220,6 +223,9 @@ section {
   padding-top: .5rem;
 }
 
+/* skills-wrapper -- end */
+
+/* portfolio-wrapper -- start */
 .portfolio-wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -272,4 +278,58 @@ section {
   background-repeat: no-repeat;
 }
 
-/* page divide -- end */
+/* portfolio-wrapper -- end */
+
+/* services-grid -- start */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2.5rem;
+  position: relative;
+}
+
+.service {
+  background: var(--bg-accent);
+  padding: 1.5rem;
+  text-align: center;
+  position: relative;
+  z-index: 50;
+}
+
+.service h3 {
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: .5rem;
+}
+
+.service span {
+  font-size: 3.5rem;
+  color: var(--main);
+  display: inline-block;
+  margin: 1rem 0rem;
+}
+
+.service p {
+  color: var(--font);
+  font-size: .85rem;
+  line-height: 1.8rem;
+}
+
+/* services-grid -- end */
+
+/* brands -- start */
+.brands{
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0rem 3rem 0rem;
+}
+.brands span{
+  color: var(--font);
+  display: inline-block;
+  font-size: 4rem;
+  margin-right: 5rem;
+}
+.brands span:last-child{
+  margin-right: 0rem;
+}
+/* brands -- end */
