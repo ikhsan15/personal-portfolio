@@ -19,36 +19,44 @@
 		/>
 		<!-- main css -->
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<!-- responsive css -->
+		<link rel="stylesheet" type="text/css" href="css/responsive.css" />
 	</head>
 	<body>
 		<div class="wrapper">
+			<input type="checkbox" id="menu-toggle" />
 			<!-- header -- start -->
 			<header>
 				<h3>developer <small>2.0</small></h3>
-				<ul>
-					<li><a href="">home</a></li>
-					<li><a href="">about</a></li>
-					<li><a href="">portfolio</a></li>
-					<li><a href="">services</a></li>
-					<li>
-						<a href="">
-							<span class="las la-search"></span>
-						</a>
-					</li>
-					<li>
-						<a href="">
-							<span class="lab la-twitter"></span>
-						</a>
-					</li>
-					<li>
-						<a href="">
-							<span class="lab la-instagram"></span>
-						</a>
-					</li>
-					<li>
-						<a href=""> <span class="las la-sms"></span>contact </a>
-					</li>
-				</ul>
+				<div class="main-menu">
+					<ul>
+						<li><a href="">home</a></li>
+						<li><a href="">about</a></li>
+						<li><a href="">portfolio</a></li>
+						<li><a href="">services</a></li>
+						<li class="hide-sm">
+							<a href="">
+								<span class="las la-search"></span>
+							</a>
+						</li>
+						<li class="hide-sm">
+							<a href="">
+								<span class="lab la-twitter"></span>
+							</a>
+						</li>
+						<li class="hide-sm">
+							<a href="">
+								<span class="lab la-instagram"></span>
+							</a>
+						</li>
+						<li>
+							<a href=""> <span class="las la-sms"></span>contact </a>
+						</li>
+					</ul>
+				</div>
+				<label for="menu-toggle">
+					<span class="las la-bars"></span>
+				</label>
 			</header>
 			<!-- header -- end -->
 
@@ -141,7 +149,7 @@
 				</div>
 				<div class="portfolio-wrapper">
 					<div class="bg-wrap left"></div>
-					<div class="bg-wrap right"></div>
+					<div class="bg-wrap right" id="bg-right"></div>
 
 					<div class="portfolio">
 						<h3>visual art</h3>
@@ -325,7 +333,7 @@
 					</div>
 					<div
 						class="contact-img"
-						style="background-image: url(img/5.jpeg)"
+						style="background-image: url(img/user.png)"
 					></div>
 				</div>
 			</section>

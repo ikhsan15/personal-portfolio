@@ -1,0 +1,83 @@
+@media only screen and (max-width: 1024px){
+  .wrapper{
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 845px){
+  header label{
+    display: grid;
+  }
+  .main-menu{
+    position: absolute;
+    top: -100%;
+    background: var(--bg-accent);
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 1.5rem 0rem;
+    transition: top 300ms;
+  }
+  #menu-toggle:checked ~ header .main-menu{
+    top: 70px;
+  }
+  header ul{
+    display: block;
+    width: 90%;
+    margin: auto;
+  }
+  header li{
+    margin: 0;
+    margin-bottom: .8rem;
+  }
+  header li:last-child{
+    margin-top: 1rem;
+  }
+  header li.hide-sm{
+    display: none;
+  }
+  .footer-grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 768px){
+  .hero img{
+    display: none;
+  }
+  .portfolio-wrapper, .services-grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #bg-right {
+    bottom: -10px;
+    left: -10px;
+  }
+  .contact-grid{
+    grid-template-columns: 100%;
+  }
+  .contact-img{
+    display: none;
+  }
+  .skills-wrapper{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .skill{
+    display: grid;
+    justify-content: center;
+  }
+  .skill p{
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 580px){
+  .portfolio-wrapper, .services-grid{
+    grid-template-columns: 100%;
+  }
+  .service{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  .hero{
+    min-height: 60vh;
+  }
+}
