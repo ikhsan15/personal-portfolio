@@ -35,6 +35,10 @@
   header li.hide-sm{
     display: none;
   }
+  .hero img {
+    display: grid;
+    width: 20rem;
+  }
   .footer-grid{
     grid-template-columns: repeat(2, 1fr);
   }
@@ -104,7 +108,6 @@
   }
   .hero img {
     position: absolute;
-    bottom: 0rem;
     width: 10rem;
     margin: 0 40% 5rem 0;
   }
