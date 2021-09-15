@@ -3,7 +3,6 @@
 
 /* global setting -- start */
 :root {
-  --main: #88ff08;
   --bg: #030302;
   --bg-accent: #191919;
   --font: #efefef;
@@ -52,7 +51,7 @@ header h3 {
 }
 
 header h3 small {
-  color: var(--main);
+  color: var(--skin-color);
   font-size: .8rem;
 }
 
@@ -74,8 +73,8 @@ header li a {
 }
 
 header li:last-child a {
-  border: 3px solid var(--main);
-  color: var(--main);
+  border: 3px solid var(--skin-color);
+  color: var(--skin-color);
   text-transform: uppercase;
   padding: .25rem 1rem;
 }
@@ -86,8 +85,8 @@ header li:last-child a span {
 
 header label{
   font-size: 1.4rem;
-  color: var(--main);
-  border: 2px solid var(--main);
+  color: var(--skin-color);
+  border: 2px solid var(--skin-color);
   height: 40px;
   width: 40px;
   display: grid;
@@ -107,24 +106,197 @@ header label{
 }
 
 .hero h1 {
-  color: var(--main);
+  color: var(--skin-color);
   font-weight: 800;
   font-size: 4.3rem;
   line-height: 5.5rem;
   margin-bottom: 2rem;
 }
 
-.hero a {
+/* .hero a {
   display: inline;
-  border: 3px solid var(--main);
+  border: 3px solid var(--skin-color);
   padding: .45rem 1rem;
   font-size: .85rem;
   text-transform: uppercase;
+} */
+
+.hero a{
+  position: absolute;
+  /* margin: 10rem 0 0 -15rem; */
+  /* top: 50%; */
+  left: 4.6rem;
+  transform: translate(-50%, -50%);
+  color: var(--skin-color);
+  padding: .45rem 1rem;
+  font-size: .85rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+.hero a:before{
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  bottom: 2px;
+  width: 50%;
+  background: rgba(255, 255, 255, 0.05);
+}
+.hero a span:nth-child(1){
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #0c002b, var(--skin-color));
+  animation: animate1 2s linear infinite;
+}
+@keyframes animate1{
+  0%{
+    transform: translateX(-100%);
+  }
+  100%{
+    transform: translateX(100%);
+  }
+}
+.hero a span:nth-child(2){
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, #0c002b, var(--skin-color));
+  animation: animate2 2s linear infinite;
+  animation-delay: 1s;
+}
+@keyframes animate2{
+  0%{
+    transform: translateY(-100%);
+  }
+  100%{
+    transform: translateY(100%);
+  }
+}
+.hero a span:nth-child(3){
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to left, #0c002b, var(--skin-color));
+  animation: animate3 2s linear infinite;
+}
+@keyframes animate3{
+  0%{
+    transform: translateX(100%);
+  }
+  100%{
+    transform: translateX(-100%);
+  }
+}
+.hero a span:nth-child(4){
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to top, #0c002b, var(--skin-color));
+  animation: animate4 2s linear infinite;
+  animation-delay: 1s;
+}
+@keyframes animate4{
+  0%{
+    transform: translateY(100%);
+  }
+  100%{
+    transform: translateY(-100%);
+  }
+}
+.hero a:hover{
+  color: #255784;
+  background: var(--skin-color);
+  box-shadow: 0 0 10px var(--skin-color), 0 0 40px var(--skin-color), 0 0 80px var(--skin-color);
+  transition-delay: 1.25s;
 }
 
-.hero a span {
-  font-size: 1.1rem;
+/* ======================================================== */
+/* .hero a{
+  position: relative;
+  display: inline-block;
+  padding: .45rem 1rem;
+  color:  var(--skin-color);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-decoration: none;
+  font-size: .85rem;
+  overflow: hidden;
+  transition: all 0.2s ease;
 }
+.hero a:hover{
+  color: #255784;
+  background: var(--skin-color);
+  box-shadow: 0 0 10px var(--skin-color), 0 0 40px var(--skin-color), 0 0 80px var(--skin-color);
+  transition-delay: 1s;
+}
+.hero a span{
+  position: absolute;
+  display: block;
+}
+.hero a span:nth-child(1){
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--skin-color));
+}
+.hero a:hover span:nth-child(1){
+  left: 100%;
+  transition: 1s;
+}
+.hero a span:nth-child(3){
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, var(--skin-color));
+}
+.hero a:hover span:nth-child(3){
+  right: 100%;
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+.hero a span:nth-child(2){
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, var(--skin-color));
+}
+.hero a:hover span:nth-child(2){
+  top: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+.hero a span:nth-child(4){
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, var(--skin-color));
+}
+.hero a:hover span:nth-child(4){
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: 0.75s;
+} */
+/* ======================================================== */
+
+/* .hero a span {
+  font-size: 1.1rem;
+} */
 
 img {
   position: absolute;
@@ -146,7 +318,7 @@ img {
 .divide {
   width: 5px;
   height: 80px;
-  background: var(--main);
+  background: var(--skin-color);
 }
 
 .divide-line {
@@ -207,7 +379,7 @@ section {
 
 .vid-wrapper div span {
   font-size: 10rem;
-  color: var(--main);
+  color: var(--skin-color);
 }
 
 /* skills-wrapper -- start */
@@ -254,7 +426,7 @@ section {
 .bg-wrap {
   height: 210px;
   width: 210px;
-  background: var(--main);
+  background: var(--skin-color);
   position: absolute;
   z-index: 10;
 }
@@ -321,7 +493,7 @@ section {
 
 .service span {
   font-size: 3.5rem;
-  color: var(--main);
+  color: var(--skin-color);
   display: inline-block;
   margin: 1rem 0rem;
 }
@@ -367,7 +539,7 @@ section {
 }
 .form-title h2 span{
   padding-top: 1rem;
-  border-top: 5px solid var(--main);
+  border-top: 5px solid var(--skin-color);
 }
 .form-title small{
   color: var(--font);
@@ -386,8 +558,8 @@ section {
 .form-group button{
   padding: .5rem 2.5rem;
   color: var(--font);
-  background: var(--main);
-  border: 1px solid var(--main);
+  background: transparent;
+  border: 3px solid var(--skin-color);
   font-weight: 700;
 }
 .form-progress{
@@ -419,7 +591,7 @@ section {
   font-weight: 600;
 }
 .progress.active div span:first-child{
-  background: var(--main);
+  background: var(--skin-color);
   width: 50%;
   height: 10px;
   position: absolute;
@@ -448,7 +620,7 @@ footer{
 }
 .about h3{
   font-size: 2.2rem;
-  color: var(--main);
+  color: var(--skin-color);
   font-weight: 600;
 }
 .about small{
@@ -462,12 +634,13 @@ footer{
 }
 .socials span{
   font-size: 1.7rem;
-  color: var(--main);
+  color: var(--skin-color);
 }
 .links h3{
   font-size: 1.1rem;
   font-weight: 600;
-  margin-bottom: .5rem;
+  margin-bottom: 1rem;
+  color: var(--skin-color);
 }
 .links ul{
   margin-bottom: 1.5rem;
@@ -477,11 +650,11 @@ footer{
   font-size: .85rem;
 }
 .links li span{
-  color: var(--main);
+  color: var(--skin-color);
   font-size: 1.3rem;
 }
 .links button{
-  border: 3px solid var(--main);
+  border: 3px solid var(--skin-color);
   background: transparent;
   color: var(--font);
   padding: .5rem 1rem;
