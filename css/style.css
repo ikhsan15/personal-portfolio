@@ -113,14 +113,6 @@ header label{
   margin-bottom: 2rem;
 }
 
-/* .hero a {
-  display: inline;
-  border: 3px solid var(--skin-color);
-  padding: .45rem 1rem;
-  font-size: .85rem;
-  text-transform: uppercase;
-} */
-
 .hero a{
   position: absolute;
   /* margin: 10rem 0 0 -15rem; */
@@ -216,87 +208,11 @@ header label{
   }
 }
 .hero a:hover{
-  color: #255784;
+  color: #ffffff;
   background: var(--skin-color);
   box-shadow: 0 0 10px var(--skin-color), 0 0 40px var(--skin-color), 0 0 80px var(--skin-color);
   transition-delay: 1.25s;
 }
-
-/* ======================================================== */
-/* .hero a{
-  position: relative;
-  display: inline-block;
-  padding: .45rem 1rem;
-  color:  var(--skin-color);
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  text-decoration: none;
-  font-size: .85rem;
-  overflow: hidden;
-  transition: all 0.2s ease;
-}
-.hero a:hover{
-  color: #255784;
-  background: var(--skin-color);
-  box-shadow: 0 0 10px var(--skin-color), 0 0 40px var(--skin-color), 0 0 80px var(--skin-color);
-  transition-delay: 1s;
-}
-.hero a span{
-  position: absolute;
-  display: block;
-}
-.hero a span:nth-child(1){
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, var(--skin-color));
-}
-.hero a:hover span:nth-child(1){
-  left: 100%;
-  transition: 1s;
-}
-.hero a span:nth-child(3){
-  bottom: 0;
-  right: -100%;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(270deg, transparent, var(--skin-color));
-}
-.hero a:hover span:nth-child(3){
-  right: 100%;
-  transition: 1s;
-  transition-delay: 0.5s;
-}
-.hero a span:nth-child(2){
-  top: -100%;
-  right: 0;
-  width: 2px;
-  height: 100%;
-  background: linear-gradient(180deg, transparent, var(--skin-color));
-}
-.hero a:hover span:nth-child(2){
-  top: 100%;
-  transition: 1s;
-  transition-delay: 0.25s;
-}
-.hero a span:nth-child(4){
-  bottom: -100%;
-  left: 0;
-  width: 2px;
-  height: 100%;
-  background: linear-gradient(360deg, transparent, var(--skin-color));
-}
-.hero a:hover span:nth-child(4){
-  bottom: 100%;
-  transition: 1s;
-  transition-delay: 0.75s;
-} */
-/* ======================================================== */
-
-/* .hero a span {
-  font-size: 1.1rem;
-} */
 
 img {
   position: absolute;
