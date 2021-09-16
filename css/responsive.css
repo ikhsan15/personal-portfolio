@@ -1,3 +1,8 @@
+@media(max-width: 1440px){
+  .form-group a{
+    margin-left: 12rem;
+  }
+}
 @media only screen and (max-width: 1024px){
   .wrapper{
     width: 90%;

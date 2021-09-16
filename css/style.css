@@ -113,7 +113,25 @@ header label{
   margin-bottom: 2rem;
 }
 
-.hero a{
+img {
+  position: absolute;
+  bottom: 0rem;
+  right: -4rem;
+}
+
+/* hero -- end */
+
+/* button hover -- start */
+.form-group a{
+  margin-top: 2rem;
+  margin-left: 2rem;
+  width: 120px;
+}
+.form-group a h5{
+  text-align: center;
+}
+
+.form-group a, .hero a{
   position: absolute;
   /* margin: 10rem 0 0 -15rem; */
   /* top: 50%; */
@@ -128,7 +146,7 @@ header label{
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
   overflow: hidden;
 }
-.hero a:before{
+.form-group a::before, .hero a:before{
   content: '';
   position: absolute;
   top: 2px;
@@ -137,7 +155,7 @@ header label{
   width: 50%;
   background: rgba(255, 255, 255, 0.05);
 }
-.hero a span:nth-child(1){
+.form-group a span:nth-child(1), .hero a span:nth-child(1){
   position: absolute;
   top: 0;
   left: 0;
@@ -154,7 +172,7 @@ header label{
     transform: translateX(100%);
   }
 }
-.hero a span:nth-child(2){
+.form-group a span:nth-child(2), .hero a span:nth-child(2){
   position: absolute;
   top: 0;
   right: 0;
@@ -172,7 +190,7 @@ header label{
     transform: translateY(100%);
   }
 }
-.hero a span:nth-child(3){
+.form-group a span:nth-child(3), .hero a span:nth-child(3){
   position: absolute;
   bottom: 0;
   left: 0;
@@ -189,7 +207,7 @@ header label{
     transform: translateX(-100%);
   }
 }
-.hero a span:nth-child(4){
+.form-group a span:nth-child(4), .hero a span:nth-child(4){
   position: absolute;
   top: 0;
   left: 0;
@@ -207,20 +225,13 @@ header label{
     transform: translateY(-100%);
   }
 }
-.hero a:hover{
+.form-group a:hover, .hero a:hover{
   color: #ffffff;
   background: var(--skin-color);
   box-shadow: 0 0 10px var(--skin-color), 0 0 40px var(--skin-color), 0 0 80px var(--skin-color);
   transition-delay: 1.25s;
 }
-
-img {
-  position: absolute;
-  bottom: 0rem;
-  right: -4rem;
-}
-
-/* hero -- end */
+/* button hover -- end */
 
 /* page divide -- start */
 .page-divide {
@@ -471,13 +482,13 @@ section {
   width: 100%;
   padding: .5rem 1rem;
 }
-.form-group button{
+/* .form-group button{
   padding: .5rem 2.5rem;
   color: var(--font);
   background: transparent;
   border: 3px solid var(--skin-color);
   font-weight: 700;
-}
+} */
 .form-progress{
   margin: 2.8rem 0rem;
   display: grid;
