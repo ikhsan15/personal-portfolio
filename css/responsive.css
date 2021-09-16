@@ -1,4 +1,4 @@
-@media(max-width: 1440px) -{
+@media(max-width: 1440px) {
   .form-group a{
     margin-left: 12rem;
   }
@@ -91,6 +91,13 @@
   .skill p{
     margin-bottom: 1.5rem;
   }
+  .footer{
+    padding-left: 3rem;
+  }
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+  }
 }
 
 @media only screen and (max-width: 580px){
@@ -120,5 +127,16 @@
     left: 50%;
     bottom: -1rem;
     text-align: center;
+  }
+  .footer{
+    padding-left: 0;
+  }
+  .footer-col{
+    width: 100%;
+    text-align: center;
+  }
+  .footer-col h4::before{
+    left: 50%;
+    margin-left: -1.7rem;
   }
 }
